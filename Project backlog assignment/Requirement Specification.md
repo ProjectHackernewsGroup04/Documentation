@@ -6,6 +6,7 @@
 This SRS document describes the software functional and nonfunctional requirements for HackerNews Project.
 HackerNews is a webpage, that allows registered users posting stories, and they can upvote or downvote each other stories.The registered users can write comments on stories.
 
+
 # Intended Audience and Reading Suggestions
 This document is intended to be used by members of the project team that will implement and verify
 the correct functioning of the system. 
@@ -16,6 +17,11 @@ the correct functioning of the system.
 
 # HackerNews Scope
 HackerNews is a web-based application that list stories posted by registered users. Users are able to post comments on stories posted by other users. The users can upvote or downvote stories, the application will show the most populate stories on top in descending order.
+
+## Objectives and success criteria of the project
+
+## References
+[Assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb)
 
 # Proposed system
 ### Features
@@ -74,3 +80,13 @@ HackerNews is a web-based application that list stories posted by registered use
 | The user clicks on the upvote icon for the story  |  The system shall redirects the user to create user page |
 | upvote button/text  |  The system shall make the text UNVISIBLE for users that is not logged |
 | unvote button/text |  The system shall make the text UNVISIBLE for users that is not logged |
+
+
+## *  Comment section for a single story (Registered and logged users)
+| Feature | Description | 
+|---|---|
+| The user post a empty comment |  The system shall ask the user to write something in the comment field |
+| The user post a comment and click "add comment"  |  The system shall publish the comment |
+| The user clicks on the comment  |  The system shall redirects the user to the comments section for the story |
+| The user clicks on reply for a published comment  |  The system shall show a textfield, so the user can reply to the comment |
+| The user clicks on add comment as reply for a published comment  | The system shall publish the comment below the comment the user clicked reply to |
