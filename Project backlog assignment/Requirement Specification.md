@@ -29,7 +29,7 @@ HackerNews is a web-based application that list stories posted by registered use
 ## *  User management
 | Feature | Description | 
 |---|---|
-| Create user  |  The system shall request the users to enter email-adresse and password to create a new account |
+| Create user  |  The system shall request the users to enter username password and to create a new account |
 | User login  |  The system shall request the user to enter email-adresse and password to login, and check if the entered credentials are valid |
 | User log off  |  The system shall provide a button for the logged users to click, so the user can be logged out |
 
