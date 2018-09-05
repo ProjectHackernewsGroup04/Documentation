@@ -140,3 +140,13 @@ The system must be able to interface with any HTML browser.
 
 ## V. Use-case Diagrams
 ![Use Case Diagram](https://github.com/ProjectHackernewsGroup04/prepare/blob/master/diagrams/UseCaseDiagram.jpg)
+
+_Participating actors_ : User and the HackerNews system.
+
+_The entry condition_ : User must register or login into system in order to interact with it.
+
+_Flow of events_ : Logged in user is able to add, edit and delete stories and comments as well as up-vote and down-vote them.
+
+_The exit condition_ : To exit the application, Logout button needs to be pressed.
+
+_Exceptions_ : If user isn't logged in, then the user is only able to read the stories and comments.
