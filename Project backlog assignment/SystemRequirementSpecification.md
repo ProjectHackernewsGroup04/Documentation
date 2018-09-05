@@ -139,3 +139,4 @@ The system must be able to interface with any HTML browser.
 [Link to Product Backlog](https://trello.com/b/6B9ZQSJn/hackernews-backlog)
 
 ## V. Use-case Diagrams
+![Use Case Diagram](https://github.com/ProjectHackernewsGroup04/prepare/blob/master/diagrams/UseCaseDiagram.jpg)
