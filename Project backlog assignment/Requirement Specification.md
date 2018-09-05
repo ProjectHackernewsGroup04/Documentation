@@ -1,29 +1,34 @@
 # HackerNews project
-### System Requirement Specification (SRS)
+### _System Requirement Specification (SRS)_
 
+_Andreas Sorbye Styltsvig_ <br>
+_Cherry Rose Semena_ <br>
+_MahNaz Karimi_ <br>
+_Diana Strele_ <br>
+_2018_ <br>
 
-#### Purpose
+#### * Purpose
 This document describes the functional and nonfunctional requirements of the HackerNews Project.
 HackerNews is a web application, that allows registered users to post stories,
 up-vote or down-vote each other stories as well as write comments on stories.
 
 
-#### Intended Audience
+#### * Intended Audience
 This document is intended to be used by members of other teams that will implement and verify
 the correct functioning of the system. 
 
-#### Project Scope
+#### * Project Scope
 * Clone the HackerNews webpage
 [https://news.ycombinator.com/](https://news.ycombinator.com/)
 
-#### HackerNews Scope
+#### * HackerNews Scope
 HackerNews is a web application that list stories posted by registered users.
 Users are able to post comments on stories posted by other users.
 The users can up-vote or down-vote stories, the application will show the most
 popular stories on top in descending order.
 
 
-## Objectives of the Project
+### _Objectives of the Project_
 
 #### Assignment Reference
 [Assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb)
@@ -33,9 +38,9 @@ popular stories on top in descending order.
 ## I. Functional Requirements
 
 
-### Features
+### _Features_
 
-#### *  User management
+####  User management
 | Feature | Description | 
 |---|---|
 | Create user  |  The system shall request the users to enter username and password to create a new account |
@@ -43,8 +48,7 @@ popular stories on top in descending order.
 | User log off  |  The system shall provide a button for the logged users to click, so the user can be logged out |
 
 
-#### *  Stories (Registered and logged users)
-
+####  Stories (Registered and logged users)
 
 | Feature | Description | 
 |---|---|
@@ -54,8 +58,7 @@ popular stories on top in descending order.
 | Upvote |  The system shall allow the users to up-vote a published story or a comment |
 | Downvote |  The system shall allow the users to down-vote a published story or a comment only if the user have over 500 karma points |
 
-
-#### *  Stories (Not logged users)
+####  Stories (Not logged users)
 | Feature | Description | 
 |---|---|
 | Post comment |  The system shall not allow the users to post comments on a story |
@@ -64,14 +67,13 @@ popular stories on top in descending order.
 | Up-vote |  The system shall not allow the users to up-vote a published story or a comment |
 | Down-vote |  The system shall not allow the users to down-vote a published story or a comment |
 
-
-#### *  Karma Voting System
+####  Karma Voting System
 | Feature | Description | 
 |---|---|
 | Comment/story get a up-vote  |  The system shall assign the up-vote to the registered author/user of the story or the comment, so that the total of karmapoint for the author gets added with the amount of up-votes for the comment or story |
 | Comment/story get a down-vote  |  The system shall assign the down-vote to the registered author of the story or the comment, so that the total of karmapoint for the author gets subtracted with the amount of down-votes for the comment or story |
 
-#### *  Story on the Storyboard (Registered and logged users)
+####  Story on the Storyboard (Registered and logged users)
 | Feature | Description | 
 |---|---|
 | The user clicks on the headline of a story |  The system shall redirects the user to the stories URL page |
@@ -82,7 +84,7 @@ popular stories on top in descending order.
 | The user clicks on the up-vote text for the story  |  The system shall assign the up-vote to the author |
 | The user clicks on the "up-vote" text for the story  |  The system shall remove the up-vote from the author |
 
-## *  Story on the Storyboard (Not logged users)
+####  Story on the Storyboard (Not logged users)
 | Feature | Description | 
 |---|---|
 | The user clicks on the headline of a story |  The system shall redirects the user to the stories URL page |
@@ -93,8 +95,7 @@ popular stories on top in descending order.
 | up-vote button/text  |  The system shall make the text UNVISIBLE for users that is not logged |
 | up-vote button/text |  The system shall make the text UNVISIBLE for users that is not logged |
 
-
-## *  Comments for a Single Story (Registered and logged users)
+####  Comments for a Single Story (Registered and logged users)
 | Feature | Description | 
 |---|---|
 | The user post a empty comment |  The system shall ask the user to write something in the comment field |
@@ -106,40 +107,39 @@ popular stories on top in descending order.
 
 ## II. Non-functional Requirements
 
-
-*    Usability
+#### *    Usability
 Interface of the system should be easy to understand and use. Login form should
 be clear and simple to be able to use without instructions. The user goal of
 using the system should be accomplished quickly and with few or no user errors.
 The interface is easy to learn and navigate; buttons, headings, and help/error
 messages are simple to understand
 
-*    Reliability
+#### *    Reliability
 In case of a system failure, an explanatory message should be displayed and within
 24h the system should be up and running again.
 Failure means the system must cancel the transaction, and must allow the user
 to start over.
 
-*    Performance
+#### *    Performance
 Systems responses to adding comment or story shall take no longer than 10 seconds to
 load onto the screen after the user submits the query.
 
-*    Supportability
+#### *    Supportability
 No specifications for supportability of the system.
 
-*    Implementation
+#### *    Implementation
 ???
 Shouldn't this be in functional req.
 
-*    Interface
+#### *    Interface
 The system interface will permit complete navigation using the keyboard or mouse
 alone, in addition to using mouse and keyboard combinations.
 The system must be able to interface with any HTML browser.
 
-*    Packaging
+#### *    Packaging
 ?
 
-*    Legal
+#### *    Legal
 ?
 
 
