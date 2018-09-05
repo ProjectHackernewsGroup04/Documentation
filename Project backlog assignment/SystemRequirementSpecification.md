@@ -132,18 +132,8 @@ The system interface will permit complete navigation using the keyboard or mouse
 alone, in addition to using mouse and keyboard combinations.
 The system must be able to interface with any HTML browser.
 
-#### *    Implementation
-?
-
-#### *    Packaging
-?
-
-#### *    Legal
-?
-
-
 ## III. Constraints
-
+?
 
 ## IV. Product Backlog
 [Link to Product Backlog](https://trello.com/b/6B9ZQSJn/hackernews-backlog)
