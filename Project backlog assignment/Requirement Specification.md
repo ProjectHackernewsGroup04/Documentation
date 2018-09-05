@@ -1,88 +1,100 @@
-# Requirement Specification Document (SRS) 
-#### HackerNews project
+# HackerNews project
+### System Requirement Specification (SRS)
 
 
-# Purpose 
-This SRS document describes the software functional and nonfunctional requirements for HackerNews Project.
-HackerNews is a webpage, that allows registered users posting stories, and they can upvote or downvote each other stories.The registered users can write comments on stories.
+#### Purpose
+This document describes the functional and nonfunctional requirements of the HackerNews Project.
+HackerNews is a web application, that allows registered users to post stories,
+up-vote or down-vote each other stories as well as write comments on stories.
 
 
-# Intended Audience and Reading Suggestions
-This document is intended to be used by members of the project team that will implement and verify
+#### Intended Audience
+This document is intended to be used by members of other teams that will implement and verify
 the correct functioning of the system. 
 
-# Project Scope
-* Create a clone of the HackerNews webpage
+#### Project Scope
+* Clone the HackerNews webpage
 [https://news.ycombinator.com/](https://news.ycombinator.com/)
 
-# HackerNews Scope
-HackerNews is a web-based application that list stories posted by registered users. Users are able to post comments on stories posted by other users. The users can upvote or downvote stories, the application will show the most populate stories on top in descending order.
+#### HackerNews Scope
+HackerNews is a web application that list stories posted by registered users.
+Users are able to post comments on stories posted by other users.
+The users can up-vote or down-vote stories, the application will show the most
+popular stories on top in descending order.
 
-## Objectives and success criteria of the project
 
-## References
+## Objectives of the Project
+
+#### Assignment Reference
 [Assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb)
 
-# Proposed system
+
+
+## I. Functional Requirements
+
+
 ### Features
 
-## *  User management
+#### *  User management
 | Feature | Description | 
 |---|---|
-| Create user  |  The system shall request the users to enter username password and to create a new account |
+| Create user  |  The system shall request the users to enter username and password to create a new account |
 | User login  |  The system shall request the user to enter username and password to login, and check if the entered credentials are valid |
 | User log off  |  The system shall provide a button for the logged users to click, so the user can be logged out |
 
 
-## *  Story (Registered and logged users)
+#### *  Stories (Registered and logged users)
+
 
 | Feature | Description | 
 |---|---|
 | Post comment |  The system shall allow the users to post comments on a story, and publish the comment. |
 | Edit comment |  The system shall allow the users to edit their own comments |
 | Delete comment |  The system shall allow the users to delete their own comment |
-| Upvote |  The system shall allow the users to upvote a published story or a comment |
-| Downvote |  The system shall allow the users to downvote a published story or a comment only if the user have over 500 karma points |
+| Upvote |  The system shall allow the users to up-vote a published story or a comment |
+| Downvote |  The system shall allow the users to down-vote a published story or a comment only if the user have over 500 karma points |
 
-## *  Story (Not logged users)
+
+#### *  Stories (Not logged users)
 | Feature | Description | 
 |---|---|
 | Post comment |  The system shall not allow the users to post comments on a story |
 | Post comment |  The system shall not allow the users to edit comments on a story |
 | Delete comment |  The system shall not allow the users to delete comments |
-| Upvote |  The system shall not allow the users to upvote a published story or a comment |
-| Downvote |  The system shall not allow the users to downvote a published story or a comment |
+| Up-vote |  The system shall not allow the users to up-vote a published story or a comment |
+| Down-vote |  The system shall not allow the users to down-vote a published story or a comment |
 
-## *  Karma system / vote system
+
+#### *  Karma Voting System
 | Feature | Description | 
 |---|---|
-| Comment/story get a upvote  |  The system shall assign the upvote to the registered author of the story or the comment, so that the total of karmapoint for the author gets added with the amount of upvotes for the comment or story |
-| Comment/story get a downvote  |  The system shall assign the downvote to the registered author of the story or the comment, so that the total of karmapoint for the author gets subtracted with the amount of downvotes for the comment or story |
+| Comment/story get a up-vote  |  The system shall assign the up-vote to the registered author/user of the story or the comment, so that the total of karmapoint for the author gets added with the amount of up-votes for the comment or story |
+| Comment/story get a down-vote  |  The system shall assign the down-vote to the registered author of the story or the comment, so that the total of karmapoint for the author gets subtracted with the amount of down-votes for the comment or story |
 
-## *  A story on the storyboard (Registered and logged users)
+#### *  Story on the Storyboard (Registered and logged users)
 | Feature | Description | 
 |---|---|
-| The user clicks on the headline of a story |  The system shall redirects the user to the URL page |
+| The user clicks on the headline of a story |  The system shall redirects the user to the stories URL page |
+| The user clicks on the authorname/username  |  The system shall redirects the user to the author profile page |
+| The user clicks on the comment  |  The system shall redirects the user to the comments section for the story |
+| The user clicks on the hide for the story  |  The system shall hide/remove the story from the storyboard for the user |
+| The user clicks on the up-vote icon for the story  |  The system shall assign the up-vote to the author |
+| The user clicks on the up-vote text for the story  |  The system shall assign the up-vote to the author |
+| The user clicks on the "up-vote" text for the story  |  The system shall remove the up-vote from the author |
+
+## *  Story on the Storyboard (Not logged users)
+| Feature | Description | 
+|---|---|
+| The user clicks on the headline of a story |  The system shall redirects the user to the stories URL page |
 | The user clicks on the authorname  |  The system shall redirects the user to the author profile page |
 | The user clicks on the comment  |  The system shall redirects the user to the comments section for the story |
-| The user clicks on the hide for the story  |  The system shall hide/remove the story from the storyboard exceptily for the user |
-| The user clicks on the upvote icon for the story  |  The system shall assign the upvote to the author |
-| The user clicks on the upvote text for the story  |  The system shall assign the upvote to the author |
-| The user clicks on the "unvote" text for the story  |  The system shall remove the upvote from the author |
-
-## *  A story on the storyboard (Not logged users)
-| Feature | Description | 
-|---|---|
-| The user clicks on the headline of a story |  The system shall redirects the user to the URL page |
-| The user clicks on the authorname  |  The system shall redirects the user to the author profile page |
-| The user clicks on the comment  |  The system shall redirects the user to the comments section for the story |
-| The user clicks on the hide for the story  |  The system shall hide/remove the story from the storyboard exceptily for the user |
+| The user clicks on the hide for the story  |  The system shall hide/remove the story from the storyboard for the user |
 | The user clicks on the upvote icon for the story  |  The system shall redirects the user to create user page |
-| upvote button/text  |  The system shall make the text UNVISIBLE for users that is not logged |
-| unvote button/text |  The system shall make the text UNVISIBLE for users that is not logged |
+| up-vote button/text  |  The system shall make the text UNVISIBLE for users that is not logged |
+| up-vote button/text |  The system shall make the text UNVISIBLE for users that is not logged |
 
 
-## *  Comment section for a single story (Registered and logged users)
+## *  Comments for a Single Story (Registered and logged users)
 | Feature | Description | 
 |---|---|
 | The user post a empty comment |  The system shall ask the user to write something in the comment field |
@@ -90,3 +102,51 @@ HackerNews is a web-based application that list stories posted by registered use
 | The user clicks on the comment  |  The system shall redirects the user to the comments section for the story |
 | The user clicks on reply for a published comment  |  The system shall show a textfield, so the user can reply to the comment |
 | The user clicks on add comment as reply for a published comment  | The system shall publish the comment below the comment the user clicked reply to |
+
+
+## II. Non-functional Requirements
+
+
+*    Usability
+Interface of the system should be easy to understand and use. Login form should
+be clear and simple to be able to use without instructions. The user goal of
+using the system should be accomplished quickly and with few or no user errors.
+The interface is easy to learn and navigate; buttons, headings, and help/error
+messages are simple to understand
+
+*    Reliability
+In case of a system failure, an explanatory message should be displayed and within
+24h the system should be up and running again.
+Failure means the system must cancel the transaction, and must allow the user
+to start over.
+
+*    Performance
+Systems responses to adding comment or story shall take no longer than 10 seconds to
+load onto the screen after the user submits the query.
+
+*    Supportability
+No specifications for supportability of the system.
+
+*    Implementation
+???
+Shouldn't this be in functional req.
+
+*    Interface
+The system interface will permit complete navigation using the keyboard or mouse
+alone, in addition to using mouse and keyboard combinations.
+The system must be able to interface with any HTML browser.
+
+*    Packaging
+?
+
+*    Legal
+?
+
+
+## III. Constraints
+
+
+## IV. Product Backlog
+
+
+## V. Use-case Diagram
