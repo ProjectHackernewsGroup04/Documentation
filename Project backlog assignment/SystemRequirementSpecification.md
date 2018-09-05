@@ -127,14 +127,13 @@ load onto the screen after the user submits the query.
 #### *    Supportability
 No specifications for supportability of the system.
 
-#### *    Implementation
-???
-Shouldn't this be in functional req.
-
 #### *    Interface
 The system interface will permit complete navigation using the keyboard or mouse
 alone, in addition to using mouse and keyboard combinations.
 The system must be able to interface with any HTML browser.
+
+#### *    Implementation
+?
 
 #### *    Packaging
 ?
@@ -147,6 +146,6 @@ The system must be able to interface with any HTML browser.
 
 
 ## IV. Product Backlog
-
+[Link to Product Backlog](https://trello.com/b/6B9ZQSJn/hackernews-backlog)
 
 ## V. Use-case Diagrams
