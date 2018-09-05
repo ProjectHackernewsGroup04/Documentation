@@ -1,11 +1,14 @@
-# HackerNews project
-### _System Requirement Specification (SRS)_
+_Large Systems Development_
+
+# HackerNews
 
 _Andreas Sorbye Styltsvig_ <br>
 _Cherry Rose Semena_ <br>
 _MahNaz Karimi_ <br>
 _Diana Strele_ <br>
 _2018_ <br>
+
+## System Requirement Specification (SRS)
 
 #### * Purpose
 This document describes the functional and nonfunctional requirements of the HackerNews Project.
@@ -58,7 +61,7 @@ popular stories on top in descending order.
 | Upvote |  The system shall allow the users to up-vote a published story or a comment |
 | Downvote |  The system shall allow the users to down-vote a published story or a comment only if the user have over 500 karma points |
 
-####  Stories (Not logged users)
+####  Stories (Not Registered or logged users)
 | Feature | Description | 
 |---|---|
 | Post comment |  The system shall not allow the users to post comments on a story |
@@ -84,7 +87,7 @@ popular stories on top in descending order.
 | The user clicks on the up-vote text for the story  |  The system shall assign the up-vote to the author |
 | The user clicks on the "up-vote" text for the story  |  The system shall remove the up-vote from the author |
 
-####  Story on the Storyboard (Not logged users)
+####  Story on the Storyboard (Not Registered or logged users)
 | Feature | Description | 
 |---|---|
 | The user clicks on the headline of a story |  The system shall redirects the user to the stories URL page |
@@ -149,4 +152,4 @@ The system must be able to interface with any HTML browser.
 ## IV. Product Backlog
 
 
-## V. Use-case Diagram
+## V. Use-case Diagrams
