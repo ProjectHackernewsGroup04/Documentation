@@ -30,11 +30,8 @@ Users are able to post comments on stories posted by other users.
 The users can up-vote or down-vote stories, the application will show the most
 popular stories on top in descending order.
 
-
-### _Objectives of the Project_
-
-#### Assignment Reference
-[Assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb)
+#### * Assignment Reference:
+[Link to Assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb)
 
 
 
