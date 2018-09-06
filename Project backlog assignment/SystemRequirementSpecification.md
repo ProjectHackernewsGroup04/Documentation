@@ -1,6 +1,6 @@
-_Large Systems Development_
+# _Large Systems Development_
 
-# HackerNews
+## HackerNews
 
 _Andreas Sorbye Styltsvig_ <br>
 _Cherry Rose Semena_ <br>
@@ -14,7 +14,6 @@ _2018_ <br>
 This document describes the functional and nonfunctional requirements of the HackerNews Project.
 HackerNews is a web application, that allows registered users to post stories,
 up-vote or down-vote each other stories as well as write comments on stories.
-
 
 #### * Intended Audience
 This document is intended to be used by members of other teams that will implement and verify
@@ -33,10 +32,7 @@ popular stories on top in descending order.
 #### * Assignment Reference:
 [Link to Assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb)
 
-
-
 ## I. Functional Requirements
-
 
 ### _Features_
 
@@ -47,7 +43,6 @@ popular stories on top in descending order.
 | User login  |  The system shall request the user to enter username and password to login, and check if the entered credentials are valid |
 | User log off  |  The system shall provide a button for the logged users to click, so the user can be logged out |
 
-
 ####  Stories (Registered and logged users)
 
 | Feature | Description | 
@@ -57,15 +52,6 @@ popular stories on top in descending order.
 | Delete comment |  The system shall allow the users to delete their own comment |
 | Upvote |  The system shall allow the users to up-vote a published story or a comment |
 | Downvote |  The system shall allow the users to down-vote a published story or a comment only if the user have over 500 karma points |
-
-####  Stories (Not Registered or logged users)
-| Feature | Description | 
-|---|---|
-| Post comment |  The system shall not allow the users to post comments on a story |
-| Post comment |  The system shall not allow the users to edit comments on a story |
-| Delete comment |  The system shall not allow the users to delete comments |
-| Up-vote |  The system shall not allow the users to up-vote a published story or a comment |
-| Down-vote |  The system shall not allow the users to down-vote a published story or a comment |
 
 ####  Karma Voting System
 | Feature | Description | 
@@ -104,7 +90,6 @@ popular stories on top in descending order.
 | The user clicks on reply for a published comment  |  The system shall show a textfield, so the user can reply to the comment |
 | The user clicks on add comment as reply for a published comment  | The system shall publish the comment below the comment the user clicked reply to |
 
-
 ## II. Non-functional Requirements
 
 #### *    Usability
@@ -132,14 +117,13 @@ The system interface will permit complete navigation using the keyboard or mouse
 alone, in addition to using mouse and keyboard combinations.
 The system must be able to interface with any HTML browser.
 
-## III. Constraints
-?
-
-## IV. Product Backlog
+## III. Product Backlog
 [Link to Product Backlog](https://trello.com/b/6B9ZQSJn/hackernews-backlog)
 
-## V. Use-case Diagrams
-![Use Case Diagram](https://github.com/ProjectHackernewsGroup04/prepare/blob/master/diagrams/UseCaseDiagram.jpg)
+![Product Backlog](https://github.com/ProjectHackernewsGroup04/prepare/blob/master/images/ProductBacklog.jpg)
+
+## IV. Use-case Diagrams
+![Use Case Diagram](https://github.com/ProjectHackernewsGroup04/prepare/blob/master/images/UseCaseDiagram.jpg)
 
 _Participating actors_ : User and the HackerNews system.
 
