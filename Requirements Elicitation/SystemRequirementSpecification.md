@@ -104,6 +104,7 @@ In case of a system failure, an explanatory message should be displayed and with
 24h the system should be up and running again.
 Failure means the system must cancel the transaction, and must allow the user
 to start over.
+The system shall not loose any content, which is sent to it, even if the system is down.
 
 #### *    Performance
 Systems responses to adding comment or story shall take no longer than 10 seconds to
