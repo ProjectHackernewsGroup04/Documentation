@@ -6,6 +6,7 @@ _Andreas Sorbye Styltsvig_ <br>
 _Cherry Rose Semena_ <br>
 _MahNaz Karimi_ <br>
 _Diana Strele_ <br>
+_Mikkel Ziemer Højbjerg Jensen_<br>
 _2018_ <br>
 
 ## System Requirement Specification (SRS)
