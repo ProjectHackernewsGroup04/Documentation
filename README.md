@@ -2,11 +2,11 @@
 *This readme provides you a overview of the whole project and a guideline to how start the project using Docker inside a vagrant virtual machine.* 
 
 ---
-**Title**: Documentation for our LSD project
-**Authors**: Andreas Styltsvig (cph-as283), Cherry Rose Semeña (cph-cs241), Diana Strele (cph-ds126), Mahnaz Karimi (cph-mk406), Mikkel Ziemer Højbjerg Jensen (cph-mj496)
-**Date**: 25/10/2018
-**Assignment reference**: https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb
-**Github repository for this project**: https://github.com/ProjectHackernewsGroup04
+- **Title**: Documentation for our LSD project
+- **Authors**: Andreas Styltsvig (cph-as283), Cherry Rose Semeña (cph-cs241), Diana Strele (cph-ds126), Mahnaz Karimi (cph-mk406), Mikkel Ziemer Højbjerg Jensen (cph-mj496)
+- **Date**: 25/10/2018
+- **Assignment reference**: https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb
+- **Github repository for this project**: https://github.com/ProjectHackernewsGroup04
 
 # Content
 
