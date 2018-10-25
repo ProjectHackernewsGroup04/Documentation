@@ -18,7 +18,7 @@ about | The user's optional self-description. HTML.
 submitted | List of the user's stories, polls and comments.
 
 FEATURES | FRONTEND | BACKEND | METHOD
--------|----------|--------
+-------|----------|-------- | ------------
 Register User | `/register` | `/api/register` | POST
 Login | `/login` | `/api/login` | POST
 Logout | `/logout` | `/api/logout` | GET
@@ -53,7 +53,7 @@ parts | A list of related pollopts, in display order.
 descendants | In the case of stories or polls, the total comment count.
 
 FEATURES | FRONTEND | BACKEND | METHOD
--------|----------|--------
+-------|----------|----------- | ---------------
 Add story | `/submit` | `/api/submit` | POST
 Delete story | `/delete/:id` | `/api/delete/<string:id>` | POST/DELETE
 Add comment | `/comment` | `/api/comment` | POST
