@@ -7,6 +7,8 @@
 - **Date**: 25/10/2018
 - **Assignment reference**: https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb
 - **Github repository for this project**: https://github.com/ProjectHackernewsGroup04
+---
+
 
 # Content
 
@@ -53,5 +55,10 @@ https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/
 3. `vagrant ssh`
 4. profit
 
+## 4. Navigation
 
+Goto `http://localhost:9000/newest`
+Enjoy
+
+		
 ---
