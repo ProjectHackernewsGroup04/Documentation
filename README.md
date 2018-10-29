@@ -1,10 +1,10 @@
 # Documentation
-*This readme provides you a overview of the whole project and a guideline to how start the project using Docker inside a vagrant virtual machine.* 
+*This readme provides you a overview of the whole project and a guideline to how start the project using Docker inside a vagrant virtual machine.*
 
 
 ***
 <b>Title: </b> Documentation for our LSD project <br>
-<b>Authors:</b> 
+<b>Authors:</b>
 - Andreas Styltsvig (cph-as283)
 - Cherry Rose Semeña (cph-cs241)
 - Diana Strele (cph-ds126)
@@ -15,13 +15,6 @@
 <b>Assignment reference: </b> [LSD Project Description](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/01-HN%20Clone%20Task%20Description.ipynb)<br>
 <b>Github repositories for this project: </b> https://github.com/ProjectHackernewsGroup04
 ***
-
-
-# Content
-
-Tasdable of content
-
----
 
 # Start up
 
@@ -47,7 +40,7 @@ You have to install following:
 
 1. Read and understand
 https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/lecture_notes/03-Containers%20and%20VMs.ipynb
-2. Install 
+2. Install
 3. Profit
 
 ## 3. Get the project up running
@@ -67,5 +60,17 @@ https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/
 Goto `http://localhost:9000/newest`
 Enjoy
 
-		
+### What the application can do?
+
+_See here: [API Documentation](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/API.md)_
+
+### Issue tracker:
+_In situations that you encountered some issues with our project, please make an open issue on its respective repository, and we will handle that the soonest._
+
+_List of repositories and its purpose:_
+
+- [Frontend](https://github.com/ProjectHackernewsGroup04/Frontend) - the web interface that the user can interact with, all the not yet implemented features will display "Not yet implemented" which are most likely not prioritized in the requirements. You can find the available features in the [API documentation](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/API.md)
+- [Backend](https://github.com/ProjectHackernewsGroup04/Backend) - here, all the logics are handled and the one that communicates with the database. You can test against the backend by curl http://localhost:5000/api/	, use the [API documentation](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/API.md) for reference.
+- [Helge-API](https://github.com/ProjectHackernewsGroup04/Helge-api) - this is especially made to handle Helge's requirements such as `/latest`, `/post` and `/status`, see the description [here](https://github.com/cph-cs241/soft2018fall-lsd-teaching-material/blob/master/assignments/03-Minimum_Requirements_and_API_Description.md). You can test against the helge-api by curl http://localhost:5001/api/
+- [Ops](https://github.com/ProjectHackernewsGroup04/Ops) - Ops is responsible for building all the components of the application inside a virtual machine.
 ---
