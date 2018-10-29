@@ -64,6 +64,13 @@ https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/
 3. `vagrant ssh`
 4. profit
 
+### 3. Start up the project locally
+1. Make sure you have docker on your machine
+2. `cd` into the cloned project
+3. Write `docker-compose up -d` to run the entire system. 
+
+This starts up a rabbitmq instance, two http-api applications, one to accept `student_tester.py` requests (helge-api) and one for the frontend to use (backend), a frontend project and a consumer for the rabbitmq.
+
 ## 4. Navigation
 
 Goto `http://localhost:9000/newest`
