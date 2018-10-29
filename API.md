@@ -6,7 +6,7 @@ REFERENCE: https://github.com/HackerNews/API
 ---
 
 ##### _Links (base URL):_
-* Frontend: http://46.101.43.21:9000/
+* Frontend: http://46.101.43.21:3000/
 * Backend: http://46.101.43.21:5000/api/
 * Helge-API: http://46.101.43.21:5001/
 
