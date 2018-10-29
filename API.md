@@ -4,6 +4,13 @@
 REFERENCE: https://github.com/HackerNews/API
 
 ---
+
+##### _Links (base URL):_
+* Frontend: http://46.101.43.21:9000/
+* Backend: http://46.101.43.21:5000/api/
+* Helge-API: http://46.101.43.21:5001/
+
+---
 ##### User
 User is required to be logged before performing actions such as viewing the whole story with comments, add/delete story, add comment, and/or making a reply to a certain comment. The user has also the ability to register himself.
 
@@ -19,8 +26,8 @@ submitted | List of the user's stories, polls and comments.
 
 FEATURES | FRONTEND | BACKEND | METHOD
 -------|----------|-------- | ------------
-Register User | `/register` | `/api/register` | POST
-Login | `/login` | `/api/login` | POST
+Register User | `/register` | `/api/register` | GET/POST
+Login | `/login` | `/api/login` | GET/POST
 Logout | `/logout` | `/api/logout` | GET
 
 _Sample request body:_
@@ -54,12 +61,13 @@ descendants | In the case of stories or polls, the total comment count.
 
 FEATURES | FRONTEND | BACKEND | METHOD
 -------|----------|----------- | ---------------
-Add story | `/submit` | `/api/submit` | POST
+Add story | `/submit` | `/api/submit` | GET/POST
 Delete story | `/delete/:id` | `/api/delete/<string:id>` | POST/DELETE
-Add comment | `/comment` | `/api/comment` | POST
+Add comment | `/comment` | `/api/comment` | GET/POST
 Get stories | `/newest` | `/api/item/all` | GET
 Get item | `/item/:id` | `/api/item/<string:id>` | GET
 Add reply | `/reply/:storyid/:id` | - | GET
 Confirm Delete | `/delete-confirm/:id` | - | GET
 
---to be continued...
+### Helge-api
+In addition, our project complies to [Helge's requirements](https://github.com/cph-cs241/soft2018fall-lsd-teaching-material/blob/master/assignments/03-Minimum_Requirements_and_API_Description.md) as well such as `/latest`, `/post` and `/status`.
