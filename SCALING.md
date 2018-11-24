@@ -10,20 +10,66 @@ Our components are deployed on a single server.
 We chose to scale HackerNews project using horizontal scaling where we add more (virtual) machines to our cluster using Docker Swarm. This setup support scaleability and roll-on updating.
 
 ### Guide
-step by step what we did with sequence of commands and screenshots with corresponding explanations.
 
 Inside vm `/app/`:
 
-1. Add swarm to project: 
+* Add swarm to project: 
 
 ```docker swarm init```
 
-2. Set up a Docker registry: 
+* Set up a Docker registry: 
 
 ```docker service create --name registry --publish published=5002,target=5002 registry:2```
 
-3. To deploy application stack to the swarm:
+
+* Add Docker Swarm Visualizer to `docker-compose.yml` file, view on `localhost:2001`
+
+```yml
+visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - overlay
+```
+
+* Make nodes with assigned replicas for each service in `docker-compose.yml`
+
+```yml
+helge-api:
+    image: hnclonecphb/http-api:master
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+```
+
+* To deploy application stack to the swarm:
 
 ```docker stack deploy --compose-file docker-compose.yml stackdemo```
 
+```Terminal
+vagrant@vagrant:/app$ docker stack deploy --compose-file docker-compose.yml stackdemo
+Ignoring unsupported options: links
 
+Creating network stackdemo_overlay
+Creating config stackdemo_elastic_config
+Creating config stackdemo_logstash_config
+Creating config stackdemo_logstash_pipeline
+Creating config stackdemo_kibana_config
+Creating service stackdemo_logstash
+Creating service stackdemo_helge-api
+Creating service stackdemo_rabbitmq
+Creating service stackdemo_database
+Creating service stackdemo_elasticsearch
+Creating service stackdemo_rabbitmq-consumer
+Creating service stackdemo_frontend-app
+Creating service stackdemo_backend
+Creating service stackdemo_kibana
+Creating service stackdemo_visualizer
+```
