@@ -98,7 +98,7 @@ mxwgso0yn41a        stackdemo_visualizer          replicated          1/1       
 * Create `docker-stack.yml` in service repository. 
 The `docker-stack.yml` loads the newest image from docker-hub, if the image from docker hub is newer then `docker-stack.yml` scheduals update for that service.
 
-Here is a `docker-stack.yml` file for Backend service, where it pulls the newest image from deployed version in docker-hub.
+Here is a `docker-stack.yml` file for `Backend` service.
 
 ```yml
 version: '3.5'
