@@ -1,11 +1,10 @@
 ## Scaling
 
 
-[link to assignement](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/12-DevOps_Scaling.md)
+[link to the assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/12-DevOps_Scaling.md)
 
 ### Docker Swarm
-We chose to scale HackerNews project using Docker Swarm cluster.
+We chose to scale HackerNews project using Docker Swarm cluster due to scaleability and roll-on updating.
 
 ### Guide
-Explaining step by step what we did.
-Providing a sequence of commands or a sequence of screenshots with corresponding explanations.
+step by step what we did with sequence of commands and screenshots with corresponding explanations.
