@@ -1,4 +1,4 @@
-## Scaling
+# Scaling
 
 [link to the assignment](https://github.com/datsoftlyngby/soft2018fall-lsd-teaching-material/blob/master/assignments/12-DevOps_Scaling.md)
 
@@ -93,3 +93,33 @@ wok29s5n7xgs        stackdemo_rabbitmq-consumer   replicated          3/3       
 mxwgso0yn41a        stackdemo_visualizer          replicated          1/1                 dockersamples/visualizer:stable                           *:8080->8080/tcp
 ```
 
+### Rolling Updates
+
+* Create `docker-stack.yml` in service repository. 
+The `docker-stack.yml` loads the newest image from docker-hub, if the image from docker hub is newer then `docker-stack.yml` scheduals update for that service.
+
+Here is a `docker-stack.yml` file for Backend service, where it pulls the newest image from deployed version in docker-hub.
+
+```yml
+version: '3.5'
+services:
+  backend:
+    image: hnclonecphb/backend:master
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      update_config:
+          delay: 30s
+    ports:
+      - "5000:5000"
+    networks:
+      - hackernews_ops
+      - elk
+
+networks:
+  hackernews_ops:
+    external: true
+  elk:
+    external: true
+```
