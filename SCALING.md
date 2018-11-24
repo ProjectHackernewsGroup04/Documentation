@@ -7,11 +7,11 @@
 Our components are deployed on a single server.
 ![](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/images/Screenshot%202018-11-24%20at%2014.05.57.png)
 
-We chose to scale HackerNews project using horizontal scaling where we add more (virtual) machines to our cluster using Docker Swarm. This setup support scaleability and roll-on updating.
+We chose to scale HackerNews project using horizontal scaling using Docker Swarm cluster.
 
 ### Guide
 
-Inside vm `/app/`:
+Inside vm of the project `cd /app/`:
 
 * Add swarm to project: 
 
@@ -38,7 +38,7 @@ visualizer:
       - overlay
 ```
 
-* Make nodes with assigned replicas for each service in `docker-compose.yml`
+* Make nodes with assigned replicas for services in `docker-compose.yml`
 
 ```yml
 helge-api:
@@ -51,10 +51,9 @@ helge-api:
 
 * To deploy application stack to the swarm:
 
-```docker stack deploy --compose-file docker-compose.yml stackdemo```
+```vagrant@vagrant:/app$ docker stack deploy --compose-file docker-compose.yml stackdemo```
 
 ```Terminal
-vagrant@vagrant:/app$ docker stack deploy --compose-file docker-compose.yml stackdemo
 Ignoring unsupported options: links
 
 Creating network stackdemo_overlay
@@ -73,3 +72,8 @@ Creating service stackdemo_backend
 Creating service stackdemo_kibana
 Creating service stackdemo_visualizer
 ```
+
+* To see the services and replicas running:
+
+```vagrant@vagrant:/app$ docker service ls```
+
