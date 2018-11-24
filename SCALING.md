@@ -77,3 +77,19 @@ Creating service stackdemo_visualizer
 
 ```vagrant@vagrant:/app$ docker service ls```
 
+```Terminal
+vagrant@vagrant:/app$ docker service ls
+ID                  NAME                          MODE                REPLICAS            IMAGE                                                     PORTS
+shisytgeb5ox        registry                      replicated          1/1                 registry:2                                                *:5002->5002/tcp
+25fp8xtp1ar3        stackdemo_backend             replicated          3/3                 hnclonecphb/backend:master                                *:5000->5000/tcp
+za2brbxh7fec        stackdemo_database            replicated          1/1                 hnclonecphb/database:master                               *:27017->27017/tcp
+y2co38pfm4kq        stackdemo_elasticsearch       replicated          1/1                 docker.elastic.co/elasticsearch/elasticsearch-oss:6.4.0   *:9200->9200/tcp, *:9300->9300/tcp
+2btryqmwmibh        stackdemo_frontend-app        replicated          1/1                 hnclonecphb/frontend:master                               *:3000->3000/tcp
+v5m9p0i5sdo0        stackdemo_helge-api           replicated          3/3                 hnclonecphb/http-api:master                               *:5001->5001/tcp
+5s00g5jsvaw9        stackdemo_kibana              replicated          1/1                 docker.elastic.co/kibana/kibana-oss:6.4.0                 *:5601->5601/tcp
+jzjb4ri1gysx        stackdemo_logstash            replicated          1/1                 docker.elastic.co/logstash/logstash-oss:6.4.0             *:5005->5005/tcp, *:9600->9600/tcp
+q4exshu0r2hk        stackdemo_rabbitmq            replicated          3/3                 hnclonecphb/rabbitmq-docker:master                        *:5672->5672/tcp
+wok29s5n7xgs        stackdemo_rabbitmq-consumer   replicated          3/3                 hnclonecphb/rabbitmq-consumer:master
+mxwgso0yn41a        stackdemo_visualizer          replicated          1/1                 dockersamples/visualizer:stable                           *:8080->8080/tcp
+```
+
