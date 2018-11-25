@@ -51,7 +51,7 @@ helge-api:
 
 * To deploy application stack to the swarm:
 
-```vagrant@vagrant:/app$ docker stack deploy --compose-file docker-compose.yml stackdemo```
+```vagrant@vagrant:/app$ docker stack deploy --compose-file docker-stack.yml stackdemo```
 
 ```Terminal
 Ignoring unsupported options: links
