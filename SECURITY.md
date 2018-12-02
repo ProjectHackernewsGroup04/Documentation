@@ -1,21 +1,5 @@
 # Security
 
-> _Task:_
-
-> _1. Define our assets_
-
-> _2. Risk matrix of our HackerNews project_
-
-> _3. As operators:_
-
->    _3.1 Find vulnerability of the project we monitor_
-
->    _3.2 Run OWTF_
-
->    _3.3 Find the attack in logs_
-
--------------
-
 ### 1. Assets
 
 Even thou our system is not safety critical, failure can lead to data
@@ -69,3 +53,10 @@ _Scenario:_ loss of assets
 > Risk is medium
 
 ### 3. As operators
+
+
+>    _3.1 Find vulnerability of the project we monitor_
+
+>    _3.2 Run OWTF_
+
+>    _3.3 Find the attack in logs_
