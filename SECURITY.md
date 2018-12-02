@@ -8,11 +8,11 @@
 
 > _3. As operators:_
 
->    _* Find vulnerability of the project we monitor_
+>    _3.1 Find vulnerability of the project we monitor_
 
->    _* Run OWTF_
+>    _3.2 Run OWTF_
 
->    _* Find the attack in logs_
+>    _3.3 Find the attack in logs_
 
 -------------
 
@@ -32,13 +32,40 @@ integrity and availability).
 Risk matrix is part of risk assessment process and it increases risk
 visibility.
 
+_Scenario:_ alteration of login information
+
 |   |Insignificant   |Minor   |Moderate   |Major   |Severe   |
 |---|---|---|---|---|---|
 |Almost certain   |   |   |   |   |   |
 |Likely   |   |   |   |   |   |
 |Possible   |   |   |   |   |   |
 |Unlikely   |   |   |   |   |   |
+|Rare   |   |   |   |X   |   |
+
+> Risk is low
+
+_Scenario:_ theft of login information
+
+|   |Insignificant   |Minor   |Moderate   |Major   |Severe   |
+|---|---|---|---|---|---|
+|Almost certain   |   |   |   |   |   |
+|Likely   |   |   |   |X   |   |
+|Possible   |   |   |   |   |   |
+|Unlikely   |   |   |   |   |   |
 |Rare   |   |   |   |   |   |
 
+> Risk is high
+
+_Scenario:_ loss of assets
+
+|   |Insignificant   |Minor   |Moderate   |Major   |Severe   |
+|---|---|---|---|---|---|
+|Almost certain   |   |   |   |   |   |
+|Likely   |   |   |   |   |   |
+|Possible   |   |   |   |   |   |
+|Unlikely   |   |   |   |X   |   |
+|Rare   |   |   |   |   |   |
+
+> Risk is medium
 
 ### As operators
