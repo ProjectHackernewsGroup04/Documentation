@@ -38,7 +38,7 @@ visibility.
 |Likely   |   |   |   |   |   |
 |Possible   |   |   |   |   |   |
 |Unlikely   |   |   |   |   |   |
-|rare   |   |   |   |   |   |
+|Rare   |   |   |   |   |   |
 
 
 ### As operators
