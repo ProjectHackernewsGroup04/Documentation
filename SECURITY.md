@@ -16,7 +16,7 @@
 
 -------------
 
-### Assets
+### 1. Assets
 
 Even thou our system is not safety critical, failure can lead to data
 loss, which is security critical. Assets are any data that supports
@@ -27,7 +27,7 @@ to register first. When creating an account, the username and password
 is stored in database and encrypted to assure CIA (confidentiality,
 integrity and availability).
 
-### Risk Matrix
+### 2. Risk Matrix
 
 Risk matrix is part of risk assessment process and it increases risk
 visibility.
@@ -68,4 +68,4 @@ _Scenario:_ loss of assets
 
 > Risk is medium
 
-### As operators
+### 3. As operators
