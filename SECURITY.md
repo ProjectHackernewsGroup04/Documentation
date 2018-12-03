@@ -54,7 +54,7 @@ _Scenario:_ loss of assets
 
 ### 3. As operators
 
-
+*We are having issue with installation of OWTF*
 >    _3.1 Find vulnerability of the project we monitor_
 
 >    _3.2 Run OWTF_
