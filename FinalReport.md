@@ -2,7 +2,7 @@
 
 
 > **Authors:**
-> - Andreas Sørbye Styltsvig - cph-as283
+> - Andreas Sørbye Styltsvig
 > - Cherry Rose Jimenez Semeña
 > - Mahnaz Karimi
 > - Diana Strele
