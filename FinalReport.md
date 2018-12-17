@@ -1,7 +1,9 @@
 # LSD Final report
 
+**Date:**
+> 21/12/2018
 
-> **Authors:**
+**Authors:**
 > - Andreas Sørbye Styltsvig
 > - Cherry Rose Jimenez Semeña
 > - Mahnaz Karimi
