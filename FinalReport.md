@@ -1,5 +1,13 @@
 # LSD Final report
 
+
+> **Authors:**
+> - Andreas Sørbye Styltsvig
+> - Cherry Rose Jimenez Semeña
+> - Mahnaz Karimi
+> - Diana Strele
+> - Mikkel Ziemer 
+
 # Abstract
 
 # Introduction
