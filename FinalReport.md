@@ -97,13 +97,13 @@ The following table shows our Software components, their properties and communic
 
 | Software components | Propertice | How to comunication|
 | ------ | ------ |------ |
-| Frontend [Docker Swarm] | JavaScript, Express engin | Node.js (Communicat with Bza<sackend) With these API adress:   `[/register]` `|`  ` [/login]` `|` ` [/logout]` `|`   ` [/submit] ` `[/delete/:id]` `|`  `[/comment]` `|`  `[/newest]``|`  `[/item/:id]` `|`  `[/reply/:storyid/:id]`  `|` `[/delete-confirm/:id] `|
-| Backend [Docker Swarm] | Python with Flask | RestAPI servies (Communicat with Database) With these API adress: ` [/api/login [POST]]` `|` `[/api/register[POST]]` `[/api/logout[GET]]` `[/api/submit[POST]]` `[/api/edit/<string:id>[PUT]]` `[/api/item/all[GET]]` `[/api/item/pagination/[GET]]` `[/api/item/<string:id> ['DELETE']]` `[/api/comment[POST]]`|
-| RabbitMQ producer [Docker Swarm]| Hosted server locally pip- python | Pika-  AMQP|
-|RabbitMQ Consummer[Docker Swarm] |Hosted server locally pip- python| Pika - AMQP|
-|Helge API [Docker Swarm]| Python with Flask|RestAPI servies (Communicat with Database) [ `[/latest[GET]]` `|` `[/staus[GET]] `|
-| Moitoring [Docker Swarm]| Grafana dashboard and Prometheus |Node-exporter `/metrics[GET]`|
-| Logging [Docker Swarm] | Kabane |  Logstash TCP `[/webhook'[POST]] `|
+| Frontend  | JavaScript, Express engin | Node.js (Communicat with Bza<sackend) With these API adress:   `[/register]` `|`  ` [/login]` `|` ` [/logout]` `|`   ` [/submit] ` `[/delete/:id]` `|`  `[/comment]` `|`  `[/newest]``|`  `[/item/:id]` `|`  `[/reply/:storyid/:id]`  `|` `[/delete-confirm/:id] `|
+| Backend  | Python with Flask | RestAPI servies (Communicat with Database) With these API adress: ` [/api/login [POST]]` `|` `[/api/register[POST]]` `[/api/logout[GET]]` `[/api/submit[POST]]` `[/api/edit/<string:id>[PUT]]` `[/api/item/all[GET]]` `[/api/item/pagination/[GET]]` `[/api/item/<string:id> ['DELETE']]` `[/api/comment[POST]]`|
+| RabbitMQ producer | Hosted server locally pip- python | Pika-  AMQP|
+|RabbitMQ Consummer |Hosted server locally pip- python| Pika - AMQP|
+|Helge API | Python with Flask|RestAPI servies (Communicat with Database) [ `[/latest[GET]]` `|` `[/staus[GET]] `|
+| Moitoring | Grafana dashboard and Prometheus |Node-exporter `/metrics[GET]`|
+| Logging  | Kabane |  Logstash TCP |
 |Digital Ocean as our cloud provider|CircleCI for deployment which was configured individually in every repository|Ubuntu Server|
 
 ![](https://i.gyazo.com/3644998674ecb9268364c8cf87cf11f9.png)
