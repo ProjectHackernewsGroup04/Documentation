@@ -65,7 +65,7 @@ Add story | `/submit` | `/api/submit` | GET/POST
 Delete story | `/delete/:id` | `/api/delete/<string:id>` | POST/DELETE
 Add comment | `/comment` | `/api/comment` | GET/POST
 Get stories | `/newest` | `/api/item/all` | GET
-Get story by ID | `/item/:id` | `/api/item/<string:id>` | GET
+Get item | `/item/:id` | `/api/item/<string:id>` | GET
 Add reply | `/reply/:storyid/:id` | - | GET
 Confirm Delete | `/delete-confirm/:id` | - | GET
 Edit story  | `/edit/:id` | - | GET/PUT
