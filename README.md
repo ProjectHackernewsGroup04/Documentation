@@ -83,8 +83,7 @@ _List of repositories and its purpose:_
 
 - [Frontend](https://github.com/ProjectHackernewsGroup04/Frontend) - the web interface that the user can interact with, all the not yet implemented features will display "Not yet implemented" which are most likely not prioritized in the requirements. You can find the available features in the [API documentation](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/API.md)
 - [Backend](https://github.com/ProjectHackernewsGroup04/Backend) - here, all the logics are handled and the one that communicates with the database. You can test against the backend by `curl` http://46.101.43.21:5000/api/	, use the [API documentation](https://github.com/ProjectHackernewsGroup04/Documentation/blob/master/API.md) for reference.
-- [Helge-API](https://github.com/ProjectHackernewsGroup04/Helge-api) - this is especially made to handle Helge's requirements such as `/latest`, `/post` and `/status`, see the description [here](
- You can test against the helge-api by `curl` http://46.101.43.21:5001/api/
+- [Helge-API](https://github.com/ProjectHackernewsGroup04/Helge-api) - this is especially made to handle Helge's requirements such as `/latest`, `/post` and `/status`, see the description [here](https://github.com/cph-cs241/soft2018fall-lsd-teaching-material/blob/master/assignments/03-Minimum_Requirements_and_API_Description.md). You can test against the helge-api by `curl` http://46.101.43.21:5001/api/
 - [Ops](https://github.com/ProjectHackernewsGroup04/Ops) - Ops is responsible for building all the components of the application inside a virtual machine.
 
 #### Common Errors:
