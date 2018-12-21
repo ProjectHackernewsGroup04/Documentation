@@ -14,17 +14,17 @@
 
 This is our final report for the HackerNews project in Large System Development (LSD) course.
 The course have focus on how to establish a development and production environments with
-continuously integration (CI) and continuously delivery (CD). The scope of the project
-Hackernews is to implement a functional clone of a the social news website
+continuous integration (CI) and continuous delivery (CD). The scope of the project
+Hackernews is to implement a functional clone of the social news website
 !https://news.ycombinator.com/.
 
-Under the developing phase we will be given other additional requirements to the project. We as
+Under the developing phase, we have given other additional requirements to the project. We — as
 a developers team have to be flexible and prepared for the further requirements and eventually
 implement new features or make changes to the system. In the production phase of the project,
-we are assigned new role as operators. This means that we will be both; developing our system
-and in meantime we will also be operating other group’s system. The developers and operators
+we are assigned for a new role as operators. This means that we will be both — developing our system
+and at the same time, we will also be operating other group’s system. The developers and operators
 will make a System Level Agreement (SLA) that contains requirements to service level of the
-system. The operators will monitoring the system and keep track if the system fulfill the SLA
+system. The operators will monitor the system and keep track if the system fulfill the SLA
 agreement, and eventually notify the developers when they detect any bugs, errors or
 breakdowns.
 
@@ -39,16 +39,16 @@ breakdowns.
 * Helge_api: http://46.101.43.21:5001/
 
 **Logging**
-* Kabane : http://46.101.43.21:5601/
+* Kibana : http://46.101.43.21:5601/
 
 
 ## 1. Requirements, Architecture, Design and Process
 
 ### 1.1 System Requirements
 
-Before starting development on HackerNews project, specific requirements had been given to
+Before starting the development of HackerNews project, specific requirements had been given to
 us on what this system should be able to do. As described earlier, the HackerNews project for
-LSD course was inspired from the actual news Hackernews site.
+LSD course was inspired from the actual Hackernews site.
 From the given requirements, we elicited user stories and prioritize tasks. This also gave us
 easy time to define functional and nonfunctional requirements for our system to meet. In
 functional requirements, we listed descriptions of user tasks that the system needs to support.
@@ -63,35 +63,29 @@ the system.
 * New users can register to the system, via a separate page.
 
 Non-functional requirements, or properties of our system includes an easy to use and
-understand interface of the system. Incase of system failure, transaction is canceled, allowing
+understand interface of the system. In case of system failure, transaction is canceled, allowing
 the user to start over. Systems responses to adding comment or story shall take no longer than
 3 seconds to load onto the screen after the user submits the query. Lastly, the system is able to
 interface with any HTML browser.
 
 ### 1.2. Development Process
 
-As we were closing in on how we wanted to structure our software (more on that in the next section of Software Architecture) we also decided for how the process itself should be. First of all, we decided to use Git for version control, Trello as our task management board form use stories, Github issues for issue tracking and CircleCI for our CI/CD chain.
+As we were closing in on how we wanted to structure our software (more on that in the next section of Software Architecture) we also decided on how the process itself should be. First of all, we decided to use Git for version control, Trello as our task management board form use stories, Github issues for issue tracking and CircleCI for our CI/CD chain.
 
-Initially we thought of using Gitflow workflow^1 , but since it requires quite extensive tracking and release managing, we decided to go with the more simpler; Feature Branch workflow^2. It is relatively simple in terms of developer coordination, development, testing and deployment. The
-process went something like this: 
+Initially, we thought of using Gitflow workflow<sup>1</sup> , but since it requires quite extensive tracking and release managing, we decided to go for more simpler — Feature Branch workflow<sup>2</sup>. It is relatively simple in terms of developer coordination, development, testing and deployment. The process went something like this: 
 
-In each sprint, user stories got prioritized and split up into lesser tasks. When a developer decided to do a task, they created an issue on Github, attached that issue to the task in Trello and created a new branch for that task. When they were done developing, they made a pull request on Github, asking someone else to review their code. If the code was “LGTM” (looks good to me) and all tests passed, it would get merged to the master branch. This would start the deployment task in CircleCI to deploy the newest version on Digital Ocean.
+In each sprint, user stories was prioritized and split up into lesser tasks. When a developer decided to do a task, they created an issue on Github, attached that issue to the task in Trello and created a new branch for that task. When they were done developing, they made a pull request on Github, asking someone else to review their code. If the code was “LGTM” (looks good to me) and all tests passed, it would get merged to the master branch. This would start the deployment task in CircleCI to deploy the newest version on Digital Ocean.
 
 ![](https://i.gyazo.com/c601cd5ab05ee834cce1238e6cb9bf7a.png)
 ```
 HackerNews Deployment Sequence diagram
 ```
-We used the Trello board as a Kanban board, but mixed in the sprints from SCRUM, to make sure we actually had some control and overview of what got done. Our biggest issue with using SCRUM was the task overflow, meaning that a lot of tasks got pushed to the next sprint, resulting in a larger workload in the end of the project.
-
-(^1) https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
-
-(^2) https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+We used the Trello board as a Kanban board, but mixed in the sprints from SCRUM, to make sure that we actually had some control and overview of what gets done. Our biggest issue with using SCRUM was the task overflow, meaning that a lot of tasks got pushed to the next sprint, resulting in a larger workload in the end of the project.
 
 ### 1.3. Software Architecture
 
 
-The frontend is built in NodeJS that uses Express for routing and Handlebars as its templating engine. The backend is built in Python with the Flask framework acting as the web services with REST API. For the database we use MongoDB. Grafana dashboard and Prometheus for
-monitoring the system and RabbitMQ for caching requests. Also, we used Docker Swarm for scaling the system and Vagrant or virtual machine (VM) for virtual environment to develop in.
+The frontend is built in NodeJS that uses Express for routing and Handlebars as its templating engine. The backend is built in Python with the Flask framework acting as the web services with REST API. For the database we use MongoDB. Grafana dashboard and Prometheus for monitoring the system and RabbitMQ for caching requests. Also, we used Docker Swarm for scaling the system and Vagrant or virtual machine (VM) for virtual environment to develop in.
 
 The following table shows our Software components, their properties and communication between components.
 
@@ -120,7 +114,7 @@ HackerNews initial System Architecture Diagram
 
 ### 1.4. Software Design
 
-After we got our project, we investigated how we could implement the project and what programming language and tools we could use for meet the success criterias. We have a SRS (Software Requirement Specification) document, that list all functional and nonfunctional requirements, and now we will start designing our HackerNews clone. Before we can start design, we have to investigate and analyse HackerNews website to get all informations we can about data model, API documentation and how they designed their system.
+After we got our project, we investigated how we could implement the project and what programming language and tools we could use to meet the success criterias. We have a SRS (Software Requirement Specification) document, that list all functional and nonfunctional requirements, and now we will start designing our HackerNews clone. Before we can start the design, we have to investigate and analyse HackerNews website to get all information about data model, API documentation and how they designed their system.
 
 We are aiming that our project should look similar in design and functionality as HackerNews
 
@@ -135,9 +129,8 @@ We looked after original Hackernews repository on git: https://github.com/Hacker
 HackerNews Items  Data model
 ```
 
-Since according to the API documentation, HackerNews interacts data with backend using Json objects, so we choose to follow the approach and do the same thing for our system. After investigation and analysis, we concluded that we have following concerns we have to
+Based on the API documentation, HackerNews interacts data with backend using Json objects, so we choose to follow the approach and do the same thing for our system. After investigation and analysis, we concluded that we have following concerns that we have to
 resolve and agree on for implementation of the HackerNews Clone.
-
 
 * Nice and clean data structure?
   * Nested object issue
@@ -162,9 +155,9 @@ resolve and agree on for implementation of the HackerNews Clone.
         * Updating nested objects  (Easy)
         * Redundancy of data ( No problem )
 
-We have discussed which data model and structure might be the best choice for our use case, and we agree on that we will not using  **SQL** approach for this use case since we are working with JSON in frontend, and we are interesting in inserting and getting data in Json scheme. If we are going  **SQL** it means we have to perform join operations each time we get data, and convert the data to JSON scheme before we forwards the data to frontend. And with scaling in mind, NoSQL is easier to scale due to their  **hortizional scaling** approach versus **SQL’s vertical scaling approach.** And we have been working with  **MongoDB** in performer projects, and we loved their document-oriented data model, where we can just inserting comments in a story, it means we can insert all comments within a story so we can just do a query to fetch everything inside a single story with nested comments, it is smart!
+We have discussed which data model and structure might be the best choice for our use case, and we agreed that we will not use  **SQL** approach for this use case since we are working with JSON in frontend, and we are interested in inserting and getting data in Json scheme. If we are going for **SQL**, it means that we have to perform join operations each time we get data, and convert the data to JSON scheme before we forward the data to frontend. And with scaling in mind, NoSQL is easier to scale due to their  **horizontal scaling** approach versus **SQL’s vertical scaling approach.** And we have been working with  **MongoDB** in previous projects, and we love the document-oriented data model, where we can just insert comments in a story — it means we can insert all comments within a story, so we can just do a query to fetch everything inside a single story with nested comments, it is smart!
 
-First we came up with a data model sketch that there are two objects:  **`items`** and  **`users`** . Users can create an account and create a story and comments. Comments is our story's properties, but we encountered a problem. How could comments stand under another comment under the relevant story, our solution was to make a nested object.
+First, we came up with a data model sketch that there are two objects:  **`items`** and  **`users`** . Users can create an account and create a story and comments. Comments is our story's properties, but we encountered a problem. How could comments stand under another comment under the relevant story, our solution was to make a nested object.
 
 ![](https://i.gyazo.com/8bffcdbd08302d1e26a5fbd339a49c4a.png)
 ```
@@ -181,7 +174,7 @@ For the software design, we started off with only two projects in mind, the fron
 backend, but ended up with far more, and an architecture even closer to a micro service
 architecture than we initially expected. The reason for that was, that we quickly found out, that
 by doing this, we could easily scale individual services later. Because we already thought of this
-early on, we were actually able to replace CloudAMQP^3 with our own hosted RabbitMQ server
+early on, we were actually able to replace CloudAMQP<sup>3</sup> with our own hosted RabbitMQ server
 easily. When we used CloudAMQP, we chose to use their webhook service, so we didn’t have
 to pull for the data, since we didn’t want our software to have that responsibility as well. Later,
 when we replaced CloudAMQP, we had to make our own webhook service or integrate
@@ -190,10 +183,6 @@ the responsibilities of the applications.
 Initially we thought we had to have only one API. One that worked for both the frontend and for
 Helge to query. After finding out this was not necessary, we decided to split up that
 responsibility. Helge got his own API to post requests to, and the frontend got its own backend.
-
-
-(^3) https://www.cloudamqp.com/
-
 
 ## 2. Maintenance and SLA Status
 
@@ -269,7 +258,7 @@ ewest,/newest/:max",statusCode="200"}
 At first, we have had a great setup and communication held on discord, and rely on their
 documentation in google docs. We have gotten more or less no issue with their Hackernews
 project, and the main reason is that they have been using Kubernetes since day 1 in production.
-Kubernetes^4 makes their system incredibly crash-proof and it even gave them difficulties in
+Kubernetes<sup>4</sup> makes their system incredibly crash-proof and it even gave them difficulties in
 making the system crash for the assignment in Logging. The application has been scaled
 beforehand.
 
@@ -300,8 +289,6 @@ well, not just for us, being the operators, but also for us being the developers
 seen most of the problems in our system more than we have seen in the group we are
 operating.
 
-(^4) ​https://en.wikipedia.org/wiki/Kubernetes
-
 ## 3. Discussion
 
 ### 3.1. Technical Discussion
@@ -312,29 +299,31 @@ implement, but were sometimes presented in a very specific way, with the assumpt
 every group had deployed and/or developed their project in a specific way.
 
 The actual operation was by far the hardest part about this project. Everytime a new service like
-Grafana, Prometheus etc. was attached, new issues appeared. First of all, before deploying all
+Grafana, Prometheus, etc. was attached, new issues appeared. First of all, before deploying all
 the new services, our application was already dockerized and had a self contained CI/CD chain.
 This meant, that we could quickly bring broken services up again. After a while we ended up
 deploying all of our services as a Docker Service, to make sure to meet the uptime SLA. When
 deployed as a docker service, the container is automatically started up again if it shuts down
 unexpectedly.
+
 We let Grafana monitor the services and one of our first incidents were an out of memory error
-that we got every time we tried to start up Grafana. The container was simple killed by the
-
-
+that we got every time we tried to start up Grafana. The container was simple killed by the 
 kernel, and therefore, we got no errors in the container itself. We had to trace the error back
 through the kernel log, to find out Grafana was killed after a brief delay, because we ran out of
 memory. Increasing the memory on the server resolved the issue.
+
 The most difficult error to track down, that gave us a lot of downtime, was a follow up on the
 above mentioned issue. Everytime we started up Grafana, our front-end application loaded
 infinitely. After a while we got a reply that the request timed out. No errors logged, and the
 application still running. After several hours of debugging we finally noticed a duplicate port
-binding on port 3000. Grafa started up on 3000 as well as our frontend. After changing the port
+binding on port 3000. Grafana started up on 3000 as well as our frontend. After changing the port
 binding for Grafana to 3001 the issue was resolved.
+
 Third, we have an ongoing issue with RabbitMQ not being able to allocate memory. This is
-actually an Erlang error, that isn’t quite resolved yet^5. There are various suggestions to limit the
+actually an Erlang error, that isn’t quite resolved yet<sup>5</sup>. There are various suggestions to limit the
 maximum memory usage of the RabbitMQ container, to prevent this error from appearing. We
 are yet to confirm that this is a fix though.
+
 We haven’t received any feedback from the OPS group whatsoever. Actually, it was either
 ourselves or Helge that found out we had a service outage.
 
@@ -383,5 +372,16 @@ definitely extended our knowledge on maintenance and having a role of monitoring
 systems. To conclude, there must be a disciplined approach to software development,
 especially in the case of large projects as such.
 
-(^5) ​https://github.com/rabbitmq/rabbitmq-server/issues/
+
+***
+##### References:
+<sup>1</sup> https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+<sup>2</sup> https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+
+<sup>3</sup> https://www.cloudamqp.com/
+
+<sup>4</sup> ​https://en.wikipedia.org/wiki/Kubernetes
+
+<sup>5</sup> ​https://github.com/rabbitmq/rabbitmq-server/issues/
 
