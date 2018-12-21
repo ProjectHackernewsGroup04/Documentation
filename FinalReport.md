@@ -187,7 +187,7 @@ the responsibilities of the applications.
 Initially we thought we had to have only one API. One that worked for both the frontend and for
 Helge to query. After finding out this was not necessary, we decided to split up that
 responsibility. Helge got his own API to post requests to, and the frontend got its own backend.
-DONE I guess
+
 
 (^3) https://www.cloudamqp.com/
 
@@ -210,17 +210,17 @@ that they have made for choosing it, their challenges during the development pro
 quite empty page, and so on. After the survey that they did for UFO, they also revised the
 documentation based on our comments.
 
+![](https://i.gyazo.com/c290daf0d693e968354d5e95ee0d594e.png)
+Basis for the revised documentation: https://github.com/BingoBois/UFO-Assignment
 
-Basis for the revised documentation: ​https://github.com/BingoBois/UFO-Assignment
 
 ### 2.2. Service-Level Agreement
 
-We conducted a meeting for the Service-Level
-Agreement(SLA) with the group that we are
-operating (Group E) and with the group that
-operates our system (Group C). We have
-agreed upon this SLA:
-
+We conducted a meeting for the Service-Level Agreement(SLA) with the group that we are operating (Group E) and with the group that operates our system (Group C). We have agreed upon this SLA:
+![](https://i.gyazo.com/347dc033e5214cf233f6cdb46ac7059c.png)
+```
+SLA AGREEMENT NOTE
+```
 This how we implemented the Prometheus metrics based on the SLA in our Hackernews project
 which could possibly be the same as what Group E's metrics, since we couldn't verify it — it
 doesn't exist anymore due to some issues they had for the last assignment in Scaling:
@@ -253,10 +253,10 @@ ewest,/newest/:max",statusCode="200"}
 ```
 
 **Our Grafana Dashboard:**
-
+![](https://i.gyazo.com/f918a72bca33716e304f607419df06c8.png)
 
 **Group E Grafana Dashboard:**
-
+![](https://i.gyazo.com/22e3d7ec48b0f7a41a1289a48f080002.png)
 ### 2.3. Maintenance and Reliability
 
 At first, we have had a great setup and communication held on discord, and rely on their
@@ -265,24 +265,24 @@ project, and the main reason is that they have been using Kubernetes since day 1
 Kubernetes^4 makes their system incredibly crash-proof and it even gave them difficulties in
 making the system crash for the assignment in Logging. The application has been scaled
 beforehand.
-
+![](https://i.gyazo.com/aeb9208e79fc13f0005c3155f5160e33.png)
 So they ended up with the idea that the only way they could crash the system is to shutdown
 MySQL server, which is just a fine approach.
-
+![](https://i.gyazo.com/d9ea11940883ca3e6c9bccfc8d7efbfd.png)
 **_The only issue we've posted_**
 
 Group E's Hackernews application has incredibly
 handled system crash and implemented error handling
 within their program, but it didn't escape the fact that it
 has been so slow in inserting new data.
+![](https://i.gyazo.com/7cc38e7f0331735a10ad667b7f7d0d14.png)
 
 It has been so consistently slow in data insertion, which
 makes them stay at the bottom of the latest graph. See
 here: ​http://46.101.225.71/chart.svg
 
-
 **_Group E's Findings:_**
-
+![](https://i.gyazo.com/f017741c579ec4c0773a1d2cee699843.png)
 All in all, group E have been so helpful and approachable when it comes to their project. They
 even attended the meeting that we've asked for making the agreement, and kept us posted
 when dealing with the system crash for logging. The Grafana dashboard has been so useful as
