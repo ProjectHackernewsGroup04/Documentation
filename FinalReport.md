@@ -31,21 +31,14 @@ breakdowns.
 
 ## Resources
 
-### Monitoring
-
-### Grafana : ​http://46.101.43.21:3001/
-
-### The application
-
-### Frontend : ​http://46.101.43.21:3000/
-
-### Backend: ​http://46.101.43.21:5000/
-
-### Helge_api: ​http://46.101.43.21:5001/
-
-### Logging
-
-### Kabane : ​http://46.101.43.21:5601/
+**Monitoring**
+* Grafana : ​http://46.101.43.21:3001/
+**The application**
+* Frontend : ​http://46.101.43.21:3000/
+* Backend: ​http://46.101.43.21:5000/
+* Helge_api: ​http://46.101.43.21:5001/
+**Logging**
+* Kabane : ​http://46.101.43.21:5601/
 
 
 ## 1. Requirements, Architecture, Design and Process
