@@ -27,13 +27,15 @@ breakdowns.
 ## Resources
 
 **Monitoring**
-* Grafana : ​http://46.101.43.21:3001/
+* Grafana : http://46.101.43.21:3001/
+
 **The application**
-* Frontend : ​http://46.101.43.21:3000/
-* Backend: ​http://46.101.43.21:5000/
-* Helge_api: ​http://46.101.43.21:5001/
+* Frontend : http://46.101.43.21:3000/
+* Backend: http://46.101.43.21:5000/
+* Helge_api: http://46.101.43.21:5001/
+
 **Logging**
-* Kabane : ​http://46.101.43.21:5601/
+* Kabane : http://46.101.43.21:5601/
 
 
 ## 1. Requirements, Architecture, Design and Process
@@ -64,140 +66,100 @@ interface with any HTML browser.
 
 ### 1.2. Development Process
 
-As we were closing in on how we wanted to structure our software (more on that in the next
-section of Software Architecture) we also decided for how the process itself should be.
-First of all, we decided to use Git for version control, Trello as our task management board for
-use stories, Github issues for issue tracking and CircleCI for our CI/CD chain.
+As we were closing in on how we wanted to structure our software (more on that in the next section of Software Architecture) we also decided for how the process itself should be. First of all, we decided to use Git for version control, Trello as our task management board form use stories, Github issues for issue tracking and CircleCI for our CI/CD chain.
 
-Initially we thought of using Gitflow workflow^1 , but since it requires quite extensive tracking and
-release managing, we decided to go with the more simpler; Feature Branch workflow^2. It is
-relatively simple in terms of developer coordination, development, testing and deployment. The
-process went something like this:
-In each sprint, user stories got prioritized and split up into lesser tasks. When a developer
-decided to do a task, they created an issue on Github, attached that issue to the task in Trello
-and created a new branch for that task. When they were done developing, they made a pull
-request on Github, asking someone else to review their code. If the code was “LGTM” (looks
+Initially we thought of using Gitflow workflow^1 , but since it requires quite extensive tracking and release managing, we decided to go with the more simpler; Feature Branch workflow^2. It is relatively simple in terms of developer coordination, development, testing and deployment. The
+process went something like this: 
 
-(^1) https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
-(^2) https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+In each sprint, user stories got prioritized and split up into lesser tasks. When a developer decided to do a task, they created an issue on Github, attached that issue to the task in Trello and created a new branch for that task. When they were done developing, they made a pull request on Github, asking someone else to review their code. If the code was “LGTM” (looks good to me) and all tests passed, it would get merged to the master branch. This would start the deployment task in CircleCI to deploy the newest version on Digital Ocean.
 
-
-good to me) and all tests passed, it would get merged to the master branch. This would start the
-deployment task in CircleCI to deploy the newest version on Digital Ocean.
 
 ```
 HackerNews Deployment Sequence diagram
 ```
-We used the Trello board as a Kanban board, but mixed in the sprints from SCRUM, to make
-sure we actually had some control and overview of what got done. Our biggest issue with using
-SCRUM was the task overflow, meaning that a lot of tasks got pushed to the next sprint,
-resulting in a larger workload in the end of the project.
+We used the Trello board as a Kanban board, but mixed in the sprints from SCRUM, to make sure we actually had some control and overview of what got done. Our biggest issue with using SCRUM was the task overflow, meaning that a lot of tasks got pushed to the next sprint, resulting in a larger workload in the end of the project.
+
+(^1) https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+(^2) https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 
 ### 1.3. Software Architecture
 
-```
-● Frontend:
-Express for routing, NodeJS
-● Backed:
-```
-### Python with Flask, ​web service ​RESTful API
 
-```
-● Database:
-MongoDB
-● RabbitMQ:
-​Hosted server locally
-```
-The ​frontend is built in NodeJS that uses Express for routing and Handlebars as its templating
-engine​. The ​backend is built in ​Python with the ​Flask framework acting as the web services with
-REST API. For the database we use MongoDB. Grafana dashboard and Prometheus for
-monitoring the system and ​RabbitMQ for caching requests. Also, we used Docker Swarm for
-scaling the system and Vagrant or virtual machine (VM) for virtual environment to develop in.
+* Frontend
+  * Express for routing, NodeJS
+* Backend
+  * Python with Flask, ​web service ​RESTful API
+* Database
+  * MongoDB
+* RabbitMQ:
+  * Hosted server locally
+  * 
+  
+The frontend is built in NodeJS that uses Express for routing and Handlebars as its templating engine. The backend is built in Python with the Flask framework acting as the web services with REST API. For the database we use MongoDB. Grafana dashboard and Prometheus for
+monitoring the system and RabbitMQ for caching requests. Also, we used Docker Swarm for scaling the system and Vagrant or virtual machine (VM) for virtual environment to develop in.
 
 
-We used Digital Ocean as our cloud provider and CircleCI for deployment which was configured
-individually in every repository.
+We used Digital Ocean as our cloud provider and CircleCI for deployment which was configured individually in every repository.
 
 ```
 Overview of the System Architecture
 ```
+
 ```
 HackerNews initial System Architecture Diagram
 ```
 
 ### 1.4. Software Design
 
-After we got our project, we investigated how we could implement the project and what
-programming language and tools we could use for meet the success criterias. We have a SRS
-(Software Requirement Specification) document, that list all functional and nonfunctional
-requirements, and now we will start designing our HackerNews clone. Before we can start
-design, we have to investigate and analyse HackerNews website to get all informations we can
-about data model, API documentation and how they designed their system.
+After we got our project, we investigated how we could implement the project and what programming language and tools we could use for meet the success criterias. We have a SRS (Software Requirement Specification) document, that list all functional and nonfunctional requirements, and now we will start designing our HackerNews clone. Before we can start design, we have to investigate and analyse HackerNews website to get all informations we can about data model, API documentation and how they designed their system.
 
 We are aiming that our project should look similar in design and functionality as HackerNews,
 
 ```
 The original HackerNews Interface
 ```
-We looked after original Hackernews repository on git: ​https://github.com/HackerNews/API to
-get inspiration from their model. The API documentation gives us a good overview of the data
-model, api paths, data type. We modelled our data scheme that follows the API documentation.
+We looked after original Hackernews repository on git: ​https://github.com/HackerNews/API to get inspiration from their model. The API documentation gives us a good overview of the data model, api paths, data type. We modelled our data scheme that follows the API documentation.
 
 ```
 HackerNews Items ​ Data model
 ```
 
-Since according to the API documentation, HackerNews interacts data with backend using Json
-objects, so we choose to follow the approach and do the same thing for our system.
-After investigation and analysis, we concluded that we have following concerns we have to
+Since according to the API documentation, HackerNews interacts data with backend using Json objects, so we choose to follow the approach and do the same thing for our system. After investigation and analysis, we concluded that we have following concerns we have to
 resolve and agree on for implementation of the HackerNews Clone.
 
-```
-● Nice and clean ​ data structure ​?
-○ Nested object issue
-○ Frontend should only do a single query to get all data
-○ Frontend should only do a single query to show all comments for a story
-● Which ​ DBMS ​might be the best choice?
-○ Performance
-■ Lot of inserting queries
-■ Not many selecting queries
-■ Cross reference between stories and comments and users (Indexing)
-■ Lot of data updates
-■ Approximate scale of data is in millions of objects
-○ Datamodel
-■ NoSQL
-● Inserting object ​ (Easy)
-● Get all objects ​ (Easy)
-● Updating nested object ​ (Complex)
-● Redundancy of data (​ Problem ​)
-■ SQL
-● Inserting object ​ (Complex)
-● Get all objects (​ Expensive joins ​)
-● Updating nested objects ​ (Easy)
-● Redundancy of data (​ No problem ​)
-```
-We have discussed which data model and structure might be the best choice for our use case,
-and we agree on that we will not using ​ **SQL** ​approach for this use case since we are working
-with JSON in frontend, and we are interesting in inserting and getting data in Json scheme. If
-we are going ​ **SQL** ​it means we have to perform join operations each time we get data, and
-convert the data to JSON scheme before we forwards the data to frontend. And with scaling in
-mind, NoSQL is easier to scale due to their ​ **hortizional scaling** approach versus **SQL’s
-vertical scaling approach.** ​And we have been working with ​ **MongoDB** in performer projects,
-and we loved their document-oriented data model, where we can just inserting comments in a
-story, it means we can insert all comments within a story so we can just do a query to fetch
-everything inside a single story with nested comments, it is smart!
 
-First we came up with a data model sketch that there are two objects: ​ **`items`** and ​ **`users`** ​.
-Users can create an account and create a story and comments. Comments is our story's
-properties, but we encountered a problem. How could comments stand under another comment
-under the relevant story, our solution was to make a nested object.
+* Nice and clean data structure?
+  * Nested object issue
+  * Frontend should only do a single query to get all data
+  * Frontend should only do a single query to show all comments for a story
+* Which ​ DBMS ​might be the best choice?
+  * Performance
+    * Lot of inserting queries
+    * Not many selecting queries
+    * Cross reference between stories and comments and users (Indexing)
+    * Lot of data updates
+    * Approximate scale of data is in millions of objects
+  * Datamodel
+     * NoSQL
+       * Inserting object ​ (Easy)
+       * Get all objects ​ (Easy)
+       * Updating nested object ​ (Complex)
+       * Redundancy of data (​ Problem ​)
+     * SQL
+        * Inserting object ​ (Complex)
+        * Get all objects (​ Expensive joins ​)
+        * Updating nested objects ​ (Easy)
+        * Redundancy of data (​ No problem ​)
+
+We have discussed which data model and structure might be the best choice for our use case, and we agree on that we will not using ​ **SQL** ​approach for this use case since we are working with JSON in frontend, and we are interesting in inserting and getting data in Json scheme. If we are going ​ **SQL** ​it means we have to perform join operations each time we get data, and convert the data to JSON scheme before we forwards the data to frontend. And with scaling in mind, NoSQL is easier to scale due to their ​ **hortizional scaling** approach versus **SQL’s vertical scaling approach.** ​And we have been working with ​ **MongoDB** in performer projects, and we loved their document-oriented data model, where we can just inserting comments in a story, it means we can insert all comments within a story so we can just do a query to fetch everything inside a single story with nested comments, it is smart!
+
+First we came up with a data model sketch that there are two objects: ​ **`items`** and ​ **`users`** ​. Users can create an account and create a story and comments. Comments is our story's properties, but we encountered a problem. How could comments stand under another comment under the relevant story, our solution was to make a nested object.
 
 
 ```
 The tables in database
 ```
-The above picture tells that user can have many items, both stories and items. This relation
-represents a story having comments and a comment having replies/comments.
+The above picture tells that user can have many items, both stories and items. This relation represents a story having comments and a comment having replies/comments.
 
 ### 1.5. Software Implementation 
 
