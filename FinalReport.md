@@ -11,7 +11,7 @@
 > - Mikkel Ziemer Jensen
 
 
-## Introduction (Andreas)
+## Introduction 
 
 This is our final report for the HackerNews project in Large System Development (LSD) course.
 The course have focus on how to establish a development and production environments with
