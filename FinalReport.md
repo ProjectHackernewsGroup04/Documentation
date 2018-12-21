@@ -1,15 +1,10 @@
 # LSD Final report
 
-**Date:**
-> 21/12/2018
-
-**Authors:**
-> - Andreas Sørbye Styltsvig
-> - Cherry Rose Jimenez Semeña
-> - Mahnaz Karimi
-> - Diana Strele
-> - Mikkel Ziemer Jensen
-
+---
+**Course:** Large System Development (LSD)
+**Authors:** Andreas Sørbye Styltsvig ,Cherry Rose Jimenez Semeña, Mahnaz Karimi, Diana Strele, Mikkel Ziemer Jensen
+**Date:** 21/12/2018
+---
 
 ## Introduction 
 
@@ -17,7 +12,7 @@ This is our final report for the HackerNews project in Large System Development 
 The course have focus on how to establish a development and production environments with
 continuously integration (CI) and continuously delivery (CD). The scope of the project
 Hackernews is to implement a functional clone of a the social news website
-(​https://news.ycombinator.com/​).
+!https://news.ycombinator.com/.
 
 Under the developing phase we will be given other additional requirements to the project. We as
 a developers team have to be flexible and prepared for the further requirements and eventually
