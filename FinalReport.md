@@ -99,10 +99,20 @@ We used the Trello board as a Kanban board, but mixed in the sprints from SCRUM,
 * RabbitMQ:
   * Hosted server locally
   
+  
+  
 The frontend is built in NodeJS that uses Express for routing and Handlebars as its templating engine. The backend is built in Python with the Flask framework acting as the web services with REST API. For the database we use MongoDB. Grafana dashboard and Prometheus for
 monitoring the system and RabbitMQ for caching requests. Also, we used Docker Swarm for scaling the system and Vagrant or virtual machine (VM) for virtual environment to develop in.
 
-
+| Software component | Propertice | How to comunication|
+| ------ | ------ |------ |
+| Frontend [Docker Swarm] | JavaScript, Express engin | Node.js (Communicat with Bza<sackend) With these API adress:   `[/register]` `|`  ` [/login]` `|` ` [/logout]` `|`   ` [/submit] ` `[/delete/:id]` `|`  `[/comment]` `|`  `[/newest]``|`  `[/item/:id]` `|`  `[/reply/:storyid/:id]`  `|` `[/delete-confirm/:id] `|
+| Backend [Docker Swarm] | Python with Flask | RestAPI servies (Communicat with Database) With these API adress: ` [/api/login [POST]]` `|` `[/api/register[POST]]` `[/api/logout[GET]]` `[/api/submit[POST]]` `[/api/edit/<string:id>[PUT]]` `[/api/item/all[GET]]` `[/api/item/pagination/[GET]]` `[/api/item/<string:id> ['DELETE']]` `[/api/comment[POST]]`|
+| RabbitMQ producer [Docker Swarm]| Hosted server locally pip- python | Pika-  AMQP|
+|RabbitMQ Consummer[Docker Swarm] |Hosted server locally pip- python| Pika - AMQP|
+|Helge API [Docker Swarm]| Python with Flask|RestAPI servies (Communicat with Database) [ `[/latest[GET]]` `|` `[/post[??]]` `|`  `[/staus[GET]] `|
+| Moitoring [Docker Swarm]| Grafana dashboard and Prometheus |Node-exporter `/metrics[GET]`|
+| Logging [Docker Swarm] | Kabane |  Logstash TCP `[/webhook'[POST]] `|
 We used Digital Ocean as our cloud provider and CircleCI for deployment which was configured individually in every repository.
 
 ![](https://i.gyazo.com/3644998674ecb9268364c8cf87cf11f9.png)
