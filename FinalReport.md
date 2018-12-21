@@ -16,7 +16,7 @@ This is our final report for the HackerNews project in Large System Development 
 The course have focus on how to establish a development and production environments with
 continuously integration (CI) and continuously delivery (CD). The scope of the project
 Hackernews is to implement a functional clone of a the social news website
-https://news.ycombinator.com/.
+!https://news.ycombinator.com/.
 
 Under the developing phase we will be given other additional requirements to the project. We as
 a developers team have to be flexible and prepared for the further requirements and eventually
@@ -77,7 +77,7 @@ process went something like this:
 
 In each sprint, user stories got prioritized and split up into lesser tasks. When a developer decided to do a task, they created an issue on Github, attached that issue to the task in Trello and created a new branch for that task. When they were done developing, they made a pull request on Github, asking someone else to review their code. If the code was “LGTM” (looks good to me) and all tests passed, it would get merged to the master branch. This would start the deployment task in CircleCI to deploy the newest version on Digital Ocean.
 
-
+![](https://i.gyazo.com/c601cd5ab05ee834cce1238e6cb9bf7a.png)
 ```
 HackerNews Deployment Sequence diagram
 ```
@@ -105,10 +105,13 @@ monitoring the system and RabbitMQ for caching requests. Also, we used Docker Sw
 
 We used Digital Ocean as our cloud provider and CircleCI for deployment which was configured individually in every repository.
 
+![](https://i.gyazo.com/3644998674ecb9268364c8cf87cf11f9.png)
 ```
 Overview of the System Architecture
 ```
 
+
+![](https://i.gyazo.com/845841393a7d1ff96a2bf63b5eb51495.png)
 ```
 HackerNews initial System Architecture Diagram
 ```
@@ -118,14 +121,15 @@ HackerNews initial System Architecture Diagram
 After we got our project, we investigated how we could implement the project and what programming language and tools we could use for meet the success criterias. We have a SRS (Software Requirement Specification) document, that list all functional and nonfunctional requirements, and now we will start designing our HackerNews clone. Before we can start design, we have to investigate and analyse HackerNews website to get all informations we can about data model, API documentation and how they designed their system.
 
 We are aiming that our project should look similar in design and functionality as HackerNews,
-
+![](https://i.gyazo.com/a93e9410a09cad37cee7af2717ba354e.png)
 ```
 The original HackerNews Interface
 ```
-We looked after original Hackernews repository on git: ​https://github.com/HackerNews/API to get inspiration from their model. The API documentation gives us a good overview of the data model, api paths, data type. We modelled our data scheme that follows the API documentation.
+We looked after original Hackernews repository on git: https://github.com/HackerNews/API to get inspiration from their model. The API documentation gives us a good overview of the data model, api paths, data type. We modelled our data scheme that follows the API documentation.
 
+![](https://i.gyazo.com/aa71540af5fde69953a121270a6d23a2.png)
 ```
-HackerNews Items ​ Data model
+HackerNews Items  Data model
 ```
 
 Since according to the API documentation, HackerNews interacts data with backend using Json objects, so we choose to follow the approach and do the same thing for our system. After investigation and analysis, we concluded that we have following concerns we have to
@@ -136,7 +140,7 @@ resolve and agree on for implementation of the HackerNews Clone.
   * Nested object issue
   * Frontend should only do a single query to get all data
   * Frontend should only do a single query to show all comments for a story
-* Which ​ DBMS ​might be the best choice?
+* Which DBMS might be the best choice?
   * Performance
     * Lot of inserting queries
     * Not many selecting queries
@@ -145,21 +149,21 @@ resolve and agree on for implementation of the HackerNews Clone.
     * Approximate scale of data is in millions of objects
   * Datamodel
      * NoSQL
-       * Inserting object ​ (Easy)
-       * Get all objects ​ (Easy)
-       * Updating nested object ​ (Complex)
-       * Redundancy of data (​ Problem ​)
+       * Inserting object  (Easy)
+       * Get all objects  (Easy)
+       * Updating nested object  (Complex)
+       * Redundancy of data ( Problem )
      * SQL
-        * Inserting object ​ (Complex)
-        * Get all objects (​ Expensive joins ​)
-        * Updating nested objects ​ (Easy)
-        * Redundancy of data (​ No problem ​)
+        * Inserting object (Complex)
+        * Get all objects ( Expensive joins )
+        * Updating nested objects  (Easy)
+        * Redundancy of data ( No problem )
 
-We have discussed which data model and structure might be the best choice for our use case, and we agree on that we will not using ​ **SQL** ​approach for this use case since we are working with JSON in frontend, and we are interesting in inserting and getting data in Json scheme. If we are going ​ **SQL** ​it means we have to perform join operations each time we get data, and convert the data to JSON scheme before we forwards the data to frontend. And with scaling in mind, NoSQL is easier to scale due to their ​ **hortizional scaling** approach versus **SQL’s vertical scaling approach.** ​And we have been working with ​ **MongoDB** in performer projects, and we loved their document-oriented data model, where we can just inserting comments in a story, it means we can insert all comments within a story so we can just do a query to fetch everything inside a single story with nested comments, it is smart!
+We have discussed which data model and structure might be the best choice for our use case, and we agree on that we will not using  **SQL** approach for this use case since we are working with JSON in frontend, and we are interesting in inserting and getting data in Json scheme. If we are going  **SQL** it means we have to perform join operations each time we get data, and convert the data to JSON scheme before we forwards the data to frontend. And with scaling in mind, NoSQL is easier to scale due to their  **hortizional scaling** approach versus **SQL’s vertical scaling approach.** And we have been working with  **MongoDB** in performer projects, and we loved their document-oriented data model, where we can just inserting comments in a story, it means we can insert all comments within a story so we can just do a query to fetch everything inside a single story with nested comments, it is smart!
 
-First we came up with a data model sketch that there are two objects: ​ **`items`** and ​ **`users`** ​. Users can create an account and create a story and comments. Comments is our story's properties, but we encountered a problem. How could comments stand under another comment under the relevant story, our solution was to make a nested object.
+First we came up with a data model sketch that there are two objects:  **`items`** and  **`users`** . Users can create an account and create a story and comments. Comments is our story's properties, but we encountered a problem. How could comments stand under another comment under the relevant story, our solution was to make a nested object.
 
-
+![](https://i.gyazo.com/8bffcdbd08302d1e26a5fbd339a49c4a.png)
 ```
 The tables in database
 ```
