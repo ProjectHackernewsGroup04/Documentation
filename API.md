@@ -68,7 +68,7 @@ Get stories | `/newest` | `/api/item/all` | GET
 Get item | `/item/:id` | `/api/item/<string:id>` | GET
 Add reply | `/reply/:storyid/:id` | - | GET
 Confirm Delete | `/delete-confirm/:id` | - | GET
-Edit story  | `/edit/:id` | - | GET/PUT
+Edit story  | `/edit/:id` | - | GET/POST
 
 ### Helge-api
 In addition, our project complies to [Helge's requirements](https://github.com/cph-cs241/soft2018fall-lsd-teaching-material/blob/master/assignments/03-Minimum_Requirements_and_API_Description.md) as well such as `/latest`, `/post` and `/status`.
