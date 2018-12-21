@@ -120,7 +120,8 @@ HackerNews initial System Architecture Diagram
 
 After we got our project, we investigated how we could implement the project and what programming language and tools we could use for meet the success criterias. We have a SRS (Software Requirement Specification) document, that list all functional and nonfunctional requirements, and now we will start designing our HackerNews clone. Before we can start design, we have to investigate and analyse HackerNews website to get all informations we can about data model, API documentation and how they designed their system.
 
-We are aiming that our project should look similar in design and functionality as HackerNews,
+We are aiming that our project should look similar in design and functionality as HackerNews
+
 ![](https://i.gyazo.com/a93e9410a09cad37cee7af2717ba354e.png)
 ```
 The original HackerNews Interface
@@ -217,6 +218,7 @@ Basis for the revised documentation: https://github.com/BingoBois/UFO-Assignment
 ### 2.2. Service-Level Agreement
 
 We conducted a meeting for the Service-Level Agreement(SLA) with the group that we are operating (Group E) and with the group that operates our system (Group C). We have agreed upon this SLA:
+
 ![](https://i.gyazo.com/347dc033e5214cf233f6cdb46ac7059c.png)
 ```
 SLA AGREEMENT NOTE
@@ -253,10 +255,13 @@ ewest,/newest/:max",statusCode="200"}
 ```
 
 **Our Grafana Dashboard:**
+
 ![](https://i.gyazo.com/f918a72bca33716e304f607419df06c8.png)
 
 **Group E Grafana Dashboard:**
+
 ![](https://i.gyazo.com/22e3d7ec48b0f7a41a1289a48f080002.png)
+
 ### 2.3. Maintenance and Reliability
 
 At first, we have had a great setup and communication held on discord, and rely on their
@@ -265,16 +270,17 @@ project, and the main reason is that they have been using Kubernetes since day 1
 Kubernetes^4 makes their system incredibly crash-proof and it even gave them difficulties in
 making the system crash for the assignment in Logging. The application has been scaled
 beforehand.
+
 ![](https://i.gyazo.com/aeb9208e79fc13f0005c3155f5160e33.png)
-So they ended up with the idea that the only way they could crash the system is to shutdown
-MySQL server, which is just a fine approach.
+
+So they ended up with the idea that the only way they could crash the system is to shutdown MySQL server, which is just a fine approach.
+
 ![](https://i.gyazo.com/d9ea11940883ca3e6c9bccfc8d7efbfd.png)
+
 **_The only issue we've posted_**
 
-Group E's Hackernews application has incredibly
-handled system crash and implemented error handling
-within their program, but it didn't escape the fact that it
-has been so slow in inserting new data.
+Group E's Hackernews application has incredibly handled system crash and implemented error handling within their program, but it didn't escape the fact that it has been so slow in inserting new data.
+
 ![](https://i.gyazo.com/7cc38e7f0331735a10ad667b7f7d0d14.png)
 
 It has been so consistently slow in data insertion, which
@@ -282,7 +288,9 @@ makes them stay at the bottom of the latest graph. See
 here: ​http://46.101.225.71/chart.svg
 
 **_Group E's Findings:_**
+
 ![](https://i.gyazo.com/f017741c579ec4c0773a1d2cee699843.png)
+
 All in all, group E have been so helpful and approachable when it comes to their project. They
 even attended the meeting that we've asked for making the agreement, and kept us posted
 when dealing with the system crash for logging. The Grafana dashboard has been so useful as
