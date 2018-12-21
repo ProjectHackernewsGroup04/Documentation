@@ -4,7 +4,7 @@
 
 **Course**: Large System Development (LSD)
 
-**Authors**: Andreas Sørbye Styltsvig ,Cherry Rose Jimenez Semeña, Mahnaz Karimi, Diana Strele, Mikkel Ziemer Jensen
+**Authors**: Andreas Sørbye Styltsvig, Cherry Rose Jimenez Semeña, Mahnaz Karimi, Diana Strele, Mikkel Ziemer Jensen
 
 **Date**: 21/12/2018
 
