@@ -2,11 +2,11 @@
 
 ---
 
-Course: Large System Development (LSD)
+**Course**: Large System Development (LSD)
 
-Authors: Andreas Sørbye Styltsvig ,Cherry Rose Jimenez Semeña, Mahnaz Karimi, Diana Strele, Mikkel Ziemer Jensen
+**Authors**: Andreas Sørbye Styltsvig ,Cherry Rose Jimenez Semeña, Mahnaz Karimi, Diana Strele, Mikkel Ziemer Jensen
 
-Date: 21/12/2018
+**Date**: 21/12/2018
 
 ---
 
@@ -54,13 +54,13 @@ easy time to define functional and nonfunctional requirements for our system to 
 functional requirements, we listed descriptions of user tasks that the system needs to support.
 
 Our Hackernews clone must meet these functional requirements:
-● Displays a set of stories on system's front page.
-● Displays a set of comments on stories.
-● Stories or comments are posted by users, which have to be registered and logged into
+* Displays a set of stories on system's front page.
+* Displays a set of comments on stories.
+* Stories or comments are posted by users, which have to be registered and logged into
 the system.
-● Users login to the system via a separate page.
-● Users are identified by a user name and a password.
-● New users can register to the system, via a separate page.
+* Users login to the system via a separate page.
+* Users are identified by a user name and a password.
+* New users can register to the system, via a separate page.
 
 Non-functional requirements, or properties of our system includes an easy to use and
 understand interface of the system. Incase of system failure, transaction is canceled, allowing
@@ -84,6 +84,7 @@ HackerNews Deployment Sequence diagram
 We used the Trello board as a Kanban board, but mixed in the sprints from SCRUM, to make sure we actually had some control and overview of what got done. Our biggest issue with using SCRUM was the task overflow, meaning that a lot of tasks got pushed to the next sprint, resulting in a larger workload in the end of the project.
 
 (^1) https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
 (^2) https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 
 ### 1.3. Software Architecture
@@ -97,7 +98,6 @@ We used the Trello board as a Kanban board, but mixed in the sprints from SCRUM,
   * MongoDB
 * RabbitMQ:
   * Hosted server locally
-  * 
   
 The frontend is built in NodeJS that uses Express for routing and Handlebars as its templating engine. The backend is built in Python with the Flask framework acting as the web services with REST API. For the database we use MongoDB. Grafana dashboard and Prometheus for
 monitoring the system and RabbitMQ for caching requests. Also, we used Docker Swarm for scaling the system and Vagrant or virtual machine (VM) for virtual environment to develop in.
@@ -262,9 +262,6 @@ Kubernetes^4 makes their system incredibly crash-proof and it even gave them dif
 making the system crash for the assignment in Logging. The application has been scaled
 beforehand.
 
-(^4) ​https://en.wikipedia.org/wiki/Kubernetes
-
-
 So they ended up with the idea that the only way they could crash the system is to shutdown
 MySQL server, which is just a fine approach.
 
@@ -288,6 +285,8 @@ when dealing with the system crash for logging. The Grafana dashboard has been s
 well, not just for us, being the operators, but also for us being the developers — as we have
 seen most of the problems in our system more than we have seen in the group we are
 operating.
+
+(^4) ​https://en.wikipedia.org/wiki/Kubernetes
 
 ## 3. Discussion
 
@@ -351,8 +350,6 @@ to restructure. After a while, we picked up on the communication part, and the d
 started to flow, tasks on our Trello board got closed pretty fast, and we quickly had a minimum
 viable Hacker News clone up and running.
 
-(^5) ​https://github.com/rabbitmq/rabbitmq-server/issues/
-
 
 What worked really well in our group was the diversion of our skills. Some were really good in
 developing the Python code, others really good at devops and again some really good in
@@ -372,6 +369,5 @@ definitely extended our knowledge on maintenance and having a role of monitoring
 systems. To conclude, there must be a disciplined approach to software development,
 especially in the case of large projects as such.
 
-
-
+(^5) ​https://github.com/rabbitmq/rabbitmq-server/issues/
 
